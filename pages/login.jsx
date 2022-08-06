@@ -1,13 +1,12 @@
 import styled from "styled-components"
 
-import CardPosition from "../src/components/layout/Card"
+import LoginCard from "../src/components/layout/LoginCard"
 import H1 from "../src/components/typography/H1"
 import H2 from "../src/components/typography/H2"
 import H4 from "../src/components/typography/H4"
+import H5 from "../src/components/typography/H5"
 import Button from "../src/components/inputs/Button"
 import Input from "../src/components/inputs/Input"
-
-
 
 const Form = styled.form`
     display: flex;
@@ -20,20 +19,30 @@ const Text = styled.p`
     color: ${props => props.theme.grey};
 `
 
+const StyledImg = styled.img`
+    width: 42px;
+    heigth: 42px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 10px;
+`
+
 function LoginPage () {
     return (
-        <CardPosition>
-            <img src="/icon.png" alt="image" />
+        <LoginCard>
+            <StyledImg src="/icon.png" alt="image" />
             <H2>Dashboard Kit</H2>
             <H1>Log In to Dashboard Kit</H1>
             <H4> Enter your email and password below</H4>
             <Form>
                 <Input label="EMAIL" placeholder="Email address"type="email" />
+                <H5>Forgot password?</H5>
                 <Input label="PASSWORD" placeholder="Password" type="password"/>
                 <Button>Log In</Button>
             </Form>
             <Text>Don't have an account? <a href="#">Sign up</a></Text>
-        </CardPosition>
+        </LoginCard>
     )
 }
 

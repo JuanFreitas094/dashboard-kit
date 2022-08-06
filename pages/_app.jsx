@@ -22,15 +22,6 @@ const GlobalStyle = createGlobalStyle`
   a:hover {
     color: ${props => props.theme.primaryHover}
   }
-
-  img {
-    width: 42px;
-    heigth: 42px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-bottom: 10px;
-  }
 `
 
 function App ({ Component, pageProps }) {

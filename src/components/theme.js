@@ -9,7 +9,9 @@ const theme = {
     grey: '#9FA2B4',
     placeholderTextGrey :'#4B506D',
     backgroundGrey: '#363740',
-    
+    background: '#F7F8FC',
+    menuLineColor: '#DFE0EB',
+    menuButtonHover: '#4f505c',
 }
 
 export default theme

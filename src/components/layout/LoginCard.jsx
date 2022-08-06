@@ -32,7 +32,7 @@ const StyledContainer = styled.div`
     justify-content: center;
 `
 
-export default function CardPosition ({ children }) {
+export default function LoginCard ({ children }) {
     return (
        <StyledFlex>
             <StyledContainer>
