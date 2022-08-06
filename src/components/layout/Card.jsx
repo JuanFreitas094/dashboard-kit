@@ -5,14 +5,14 @@ const WIDHT_BREAK = '700px';
 const StyledFlex = styled.div`
     display: flex;
     justify-content: center;
-    background-color: #363740;
+    background-color: ${props => props.theme.backgroundGrey};
     width: 100%;
     height: 100vh;
     align-items: center;
 `
 
 const StyledContainer = styled.div`
-    background-color: white;
+    background-color: ${props => props.theme.white};
     padding: 30px 50px;
     
     max-width: 270px;

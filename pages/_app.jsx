@@ -1,4 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+
+import theme from '../src/components/theme'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -11,19 +13,23 @@ const GlobalStyle = createGlobalStyle`
     letter-spacing: 0.3px;
   }
 
-  ::placeholder {
-    font-family: 'Mulish', sans-serif;
-    opacity: 0.4;
-    padding-left: 10px;
-  }
-
-  button {
-    font-family: inherit;
-  }
-
   a {
-    color: #3751FF;
+    color: ${props => props.theme.primary};
     text-decoration: none;
+    transition: all 0.3s
+  }
+
+  a:hover {
+    color: ${props => props.theme.primaryHover}
+  }
+
+  img {
+    width: 42px;
+    heigth: 42px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 10px;
   }
 `
 
@@ -33,9 +39,12 @@ function App ({ Component, pageProps }) {
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
       <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400&display=swap" rel="stylesheet"></link>
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
+
   )
 }
 

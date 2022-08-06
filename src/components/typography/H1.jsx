@@ -4,7 +4,8 @@ const H1 = styled.h1`
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    color: #252733;
+    color: ${props => props.theme.black};
+    margin-bottom: 10px;
 `
 
 export default H1
