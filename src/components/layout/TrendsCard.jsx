@@ -3,13 +3,11 @@ import styled from "styled-components";
 const StyledContent = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     justify-content: center;
-    margin-right: auto;
     background-color: transparent;
+    height: 100%;
     width: 250px;
-    height: 70px;
     border-bottom: 1px solid ${props => props.theme.grey};
     border-left: 1px solid ${props => props.theme.grey};
 `
@@ -17,13 +15,11 @@ const StyledContent = styled.div`
 const StyledContentWithoutBorder = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     justify-content: center;
-    margin-right: auto;
     background-color: transparent;
     width: 250px;
-    height: 70px;
+    height: 100%;
     border-left: 1px solid ${props => props.theme.grey};
 `
 

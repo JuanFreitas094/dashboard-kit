@@ -6,6 +6,7 @@ import TrendsCard from "../src/components/layout/TrendsCard";
 import {GoPlus} from "react-icons/go";
 import Tag from "../src/components/inputs/Tag";
 import CardsTitle from "../src/components/layout/CardsTitle";
+import Chart from "../src/components/layout/Chart";
 
 const StyledComponent = styled.div `
     display: flex;
@@ -40,7 +41,10 @@ const StyledChart = styled.div`
 `
 
 const StyledTrendsCards = styled.div`
-    
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
 `
 
 const StyledTicketsTasks = styled.div`
@@ -110,6 +114,13 @@ const StyledButton = styled.button`
     padding-bottom: 1px;
     border-radius: 5px;
 `
+
+const StyledDivTrendsCard = styled.div`
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+`
+
 const pageName = "Overview";
 
 function OverviewPage() {
@@ -125,13 +136,16 @@ function OverviewPage() {
                     <div><OverviewCard title="On hold" number="64" /></div>
                 </StyledOverviewCards>
                 <StyledTrends>
-                    <StyledChart></StyledChart>
+                    <StyledChart>
+                        <CardsTitle title="Today's trends" description="as of 25 May 2019, 09:41 PM" link="" />
+                        <Chart/>
+                    </StyledChart>
                     <StyledTrendsCards>
-                        <TrendsCard title="Resolved" description="449" border={true}/>
-                        <TrendsCard title="Received" description="426" border={true}/>
-                        <TrendsCard title="Average first response time" description="33m" border={true}/>
-                        <TrendsCard title="Average response time" description="3h 8m" border={true}/>
-                        <TrendsCard title="Resolution within SLA" description="94%" border={false}/>
+                        <StyledDivTrendsCard><TrendsCard title="Resolved" description="449" border={true}/></StyledDivTrendsCard>
+                        <StyledDivTrendsCard><TrendsCard title="Received" description="426" border={true}/></StyledDivTrendsCard>
+                        <StyledDivTrendsCard><TrendsCard title="Average first response time" description="33m" border={true}/></StyledDivTrendsCard>
+                        <StyledDivTrendsCard><TrendsCard title="Average response time" description="3h 8m" border={true}/></StyledDivTrendsCard>
+                        <StyledDivTrendsCard><TrendsCard title="Resolution within SLA" description="94%" border={false}/></StyledDivTrendsCard>
                     </StyledTrendsCards>
                 </StyledTrends>
                 <StyledTicketsTasks>
