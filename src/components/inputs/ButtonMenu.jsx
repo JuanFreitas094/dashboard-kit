@@ -15,6 +15,17 @@ const StyledButtonMenu = styled.button`
     }
 `
 
+const StyledButtonMenuChecked = styled.button`
+    display: flex;
+    height: 45px;
+    align-items: center; 
+    justify-items: center;
+    width: 100%;
+    background:  ${props => props.theme.menuButtonHover};
+    border: none;
+    border-left: 2px solid white;
+`
+
 const StyledContent = styled.div`
     padding: 15px;
     display: flex;
@@ -31,17 +42,30 @@ const StyledText = styled.p`
     color: ${props => props.theme.lightGrey}
 `
 
-function ButtonMenu({ name, icon }) {
-    return (        
-        <StyledButtonMenu>     
-            <StyledContent>
-                <StyledIcon>
-                    {icon}
-                </StyledIcon>
-                <StyledText>{name}</StyledText>
-            </StyledContent>
-        </StyledButtonMenu> 
-    )
+function ButtonMenu({ name, icon, checked }) {
+    if (!checked) {
+        return (    
+            <StyledButtonMenu>     
+                <StyledContent>
+                    <StyledIcon>
+                        {icon}
+                    </StyledIcon>
+                    <StyledText>{name}</StyledText>
+                </StyledContent>
+            </StyledButtonMenu> 
+        )
+    } else {
+        return (    
+            <StyledButtonMenuChecked>     
+                <StyledContent>
+                    <StyledIcon>
+                        {icon}
+                    </StyledIcon>
+                    <StyledText>{name}</StyledText>
+                </StyledContent>
+            </StyledButtonMenuChecked> 
+        )
+    }
 }
 
 export default ButtonMenu

@@ -45,26 +45,38 @@ const StyledLogo = styled.img`
     width: 28px;
     heigth: 28px;
 `
+const pages = {
+    "Overview": <FaChartPie/>,
+    "Tickets": <FaTicketAlt/>,
+    "Ideas": <FaLightbulb/>,
+    "Contacts": <BsFillPeopleFill/>,
+    "Agents": <FaUserTie/>,
+    "Articles": <FaBook/>,
+}
 
-function Menu() {
+const settingsPages = {
+    "Settings": <IoMdSettings/>,
+    "Subscription": <FaAward/>
+}
+
+function Menu({ checkedPage }) {
     return (
         <StyledMenu>
             <StyledTitle>
                 <StyledLogo src="/icon.png" alt="image" />
                 <StyledText>Dashboard Kit</StyledText>
             </StyledTitle>
-
-            <a href="/overview"><ButtonMenu name="Overview" icon={<FaChartPie/>}></ButtonMenu></a>
-            <a href="/tickets"><ButtonMenu name="Tickets" icon={<FaTicketAlt/>} /></a>
-            <ButtonMenu name="Ideas" icon={<FaLightbulb/>} />
-            <ButtonMenu name="Contacts" icon={<BsFillPeopleFill/>} />
-            <ButtonMenu name="Agents" icon={<FaUserTie/>} />
-            <ButtonMenu name="Articles" icon={<FaBook/>} />
             
+            {Object.entries(pages).map(([key, value]) => (
+                <a href={"/" + key.toLowerCase()}><ButtonMenu name={key} icon={value} checked={key===checkedPage}></ButtonMenu></a>                    
+            ))}
+
             <StyledLine></StyledLine>
 
-            <ButtonMenu name="Settings" icon={<IoMdSettings/>} />
-            <ButtonMenu name="Subscription" icon={<FaAward/>} />
+            {Object.entries(settingsPages).map(([key, value]) => ( 
+                <a href={"/" + key.toLowerCase()}><ButtonMenu name={key} icon={value} checked={key===checkedPage}></ButtonMenu></a>                    
+            ))}
+
         </StyledMenu>
     )
 }

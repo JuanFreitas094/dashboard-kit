@@ -4,7 +4,6 @@ import styled from "styled-components";
 import OverviewCard from "../src/components/layout/OverviewCard";
 import TrendsCard from "../src/components/layout/TrendsCard";
 import {GoPlus} from "react-icons/go";
-import Checkbox from "../src/components/layout/Checkbox";
 import Tag from "../src/components/inputs/Tag";
 
 const StyledComponent = styled.div `
@@ -101,13 +100,14 @@ const StyledButton = styled.button`
     padding-bottom: 1px;
     border-radius: 5px;
 `
+const pageName = "Overview";
 
 function OverviewPage() {
     return (
         <StyledComponent>
-            <StyledMenu><Menu /></StyledMenu>
+            <StyledMenu><Menu checkedPage={pageName}/></StyledMenu>
             <StyledContent>
-                <Navbar title="Overview"/>
+                <Navbar title={pageName}/>
                 <StyledOverviewCards>
                     <OverviewCard title="Unresolved" number="60" />
                     <OverviewCard title="Overdue" number="16" />

@@ -72,13 +72,13 @@ const StyledText = styled.p `
     font-size: 10px;
     font-weight: 600;
 `
-
+const pageName = "Tickets";
 function TicketsPage() {
     return (
         <StyledComponent>
-            <StyledMenu><Menu /></StyledMenu>
+            <StyledMenu><Menu checkedPage={pageName}/></StyledMenu>
             <StyledContent>
-                <Navbar title="Tickets" />
+                <Navbar title={pageName} />
                 <StyledPaginationTable>
                     <StyledNavbar>
                         <StyledTitle>All tickets</StyledTitle>
