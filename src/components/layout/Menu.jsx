@@ -36,7 +36,7 @@ const StyledTitle = styled.div `
 `
 
 const StyledText = styled.p`
-    font-size: 14px;
+    font-size: 12px;
     padding-left: 5px;
     color: ${props => props.theme.lightGrey};
 `
@@ -54,8 +54,8 @@ function Menu() {
                 <StyledText>Dashboard Kit</StyledText>
             </StyledTitle>
 
-            <ButtonMenu name="Overview" icon={<FaChartPie/>} />
-            <ButtonMenu name="Tickets" icon={<FaTicketAlt/>} />
+            <a href="/overview"><ButtonMenu name="Overview" icon={<FaChartPie/>}></ButtonMenu></a>
+            <a href="/tickets"><ButtonMenu name="Tickets" icon={<FaTicketAlt/>} /></a>
             <ButtonMenu name="Ideas" icon={<FaLightbulb/>} />
             <ButtonMenu name="Contacts" icon={<BsFillPeopleFill/>} />
             <ButtonMenu name="Agents" icon={<FaUserTie/>} />

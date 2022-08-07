@@ -14,7 +14,7 @@ const StyledNavbar = styled.div`
 
 const StyledTitle = styled.span `
     flex: 1;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     text-align: left;
     padding: 0 20px; 
@@ -48,7 +48,7 @@ const StyledDivider = styled.p`
 
 const StyledText = styled.p `
     color: ${props => props.theme.black};
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 600;
 `
 

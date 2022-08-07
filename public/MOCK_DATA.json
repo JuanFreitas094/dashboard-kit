@@ -1,210 +1,210 @@
 [
 	{	
 		"Ticket details": {
-			"Text": "Bla",
-			"Last updated": "08/08/2022",
+			"Text": "Contact Email not Linked",
+			"Last updated": "Updated 1 day ago",
 			"Image": "avatar.png"
 		},
 		"Customer name": {
-			"Name": "Gabriela",
-			"Last updated": "08/08/2022"
+			"Name": "Tom Cruise",
+			"Last updated": "on 24.06.2019"
 		},
 		"Date": {
-			"Date": "08/08/2022",
-			"Time": "06:30"
+			"Date": "May 26, 2019",
+			"Time": "06:30 PM"
 		},
 		"Priority": "High"
 	},
 	{	
 		"Ticket details": {
-			"Text": "Bla",
-			"Last updated": "08/08/2022",
+			"Text": "Adding Images to Featured Posts",
+			"Last updated": "Updated 1 day ago",
 			"Image": "avatar.png"
 		},
 		"Customer name": {
-			"Name": "Gabriela",
-			"Last updated": "08/08/2022"
+			"Name": "Matt Damon",
+			"Last updated": "on 24.05.2019"
 		},
 		"Date": {
-			"Date": "08/08/2022",
-			"Time": "06:30"
+			"Date": "May 26, 2019",
+			"Time": "8:00 AM"
+		},
+		"Priority": "Low"
+	},
+	{	
+		"Ticket details": {
+			"Text": "When will I be charged this month?",
+			"Last updated": "Updated 1 day ago",
+			"Image": "avatar.png"
+		},
+		"Customer name": {
+			"Name": "Robert Downey",
+			"Last updated": "on 24.05.2019"
+		},
+		"Date": {
+			"Date": "May 26, 2019",
+			"Time": "7:30 PM"
+		},
+		"Priority": "Low"
+	},
+	{	
+		"Ticket details": {
+			"Text": "Payment not going through",
+			"Last updated": "Updated 2 days ago",
+			"Image": "avatar.png"
+		},
+		"Customer name": {
+			"Name": "Christian Bale",
+			"Last updated": "on 24.05.2019"
+		},
+		"Date": {
+			"Date": "May 25, 2019",
+			"Time": "5:00 PM"
+		},
+		"Priority": "Normal"
+	},
+	{	
+		"Ticket details": {
+			"Text": "Unable to add replies",
+			"Last updated": "Updated 2 days ago",
+			"Image": "avatar.png"
+		},
+		"Customer name": {
+			"Name": "Henry Cavil",
+			"Last updated": "on 24.05.2019"
+		},
+		"Date": {
+			"Date": "May 25, 2019",
+			"Time": "4:00 PM"
 		},
 		"Priority": "High"
 	},
 	{	
 		"Ticket details": {
-			"Text": "Bla",
-			"Last updated": "08/08/2022",
+			"Text": "Downtime since last week",
+			"Last updated": "Updated 3 days ago",
 			"Image": "avatar.png"
 		},
 		"Customer name": {
-			"Name": "Gabriela",
-			"Last updated": "08/08/2022"
+			"Name": "Chris Evans",
+			"Last updated": "on 23.05.2019"
 		},
 		"Date": {
-			"Date": "08/08/2022",
-			"Time": "06:30"
+			"Date": "May 25, 2019",
+			"Time": "2:00 PM"
+		},
+		"Priority": "Normal"
+	},
+	{	
+		"Ticket details": {
+			"Text": "Referral Bonus",
+			"Last updated": "Updated 4 day ago",
+			"Image": "avatar.png"
+		},
+		"Customer name": {
+			"Name": "Sam Smith",
+			"Last updated": "on 22.05.2019"
+		},
+		"Date": {
+			"Date": "May 25, 2019",
+			"Time": "11:30 AM"
+		},
+		"Priority": "Low"
+	},
+	{	
+		"Ticket details": {
+			"Text": "How do I change my password?",
+			"Last updated": "Updated 6 days ago",
+			"Image": "avatar.png"
+		},
+		"Customer name": {
+			"Name": "Steve Rogers",
+			"Last updated": "on 21.05.2019"
+		},
+		"Date": {
+			"Date": "May 24, 2019",
+			"Time": "1:00 PM"
+		},
+		"Priority": "Normal"
+	},
+	{	
+		"Ticket details": {
+			"Text": "Bug in server",
+			"Last updated": "Updated 6 days ago",
+			"Image": "avatar.png"
+		},
+		"Customer name": {
+			"Name": "Chris Hemsworth",
+			"Last updated": "on 13.04.2021"
+		},
+		"Date": {
+			"Date": "May 12, 2020",
+			"Time": "06:30 AM"
 		},
 		"Priority": "High"
 	},
 	{	
 		"Ticket details": {
-			"Text": "Bla",
-			"Last updated": "08/08/2022",
+			"Text": "Service down",
+			"Last updated": "Updated 10 days ago",
 			"Image": "avatar.png"
 		},
 		"Customer name": {
-			"Name": "Gabriela",
-			"Last updated": "08/08/2022"
+			"Name": "Natalie Portman",
+			"Last updated": "on 04.01.2021"
 		},
 		"Date": {
-			"Date": "08/08/2022",
-			"Time": "06:30"
+			"Date": "June 11, 2021",
+			"Time": "06:30 AM"
+		},
+		"Priority": "Normal"
+	},
+	{	
+		"Ticket details": {
+			"Text": "Can't access teams",
+			"Last updated": "Updated 1 days ago",
+			"Image": "avatar.png"
+		},
+		"Customer name": {
+			"Name": "Cristiano Ronaldo",
+			"Last updated": "on 06.10.2021"
+		},
+		"Date": {
+			"Date": "September 13, 2021",
+			"Time": "12:30 PM"
+		},
+		"Priority": "Low"
+	},
+	{	
+		"Ticket details": {
+			"Text": "Problem access network",
+			"Last updated": "Updated 30 minutes ago",
+			"Image": "avatar.png"
+		},
+		"Customer name": {
+			"Name": "Lebron James",
+			"Last updated": "on 04.10.2021"
+		},
+		"Date": {
+			"Date": "June 12, 2022",
+			"Time": "01:30 AM"
 		},
 		"Priority": "High"
 	},
 	{	
 		"Ticket details": {
-			"Text": "Bla",
-			"Last updated": "08/08/2022",
+			"Text": "Install nuget package",
+			"Last updated": "Updated 2 days ago",
 			"Image": "avatar.png"
 		},
 		"Customer name": {
-			"Name": "Gabriela",
-			"Last updated": "08/08/2022"
+			"Name": "Renato Augusto",
+			"Last updated": "on 07.08.2022"
 		},
 		"Date": {
-			"Date": "08/08/2022",
-			"Time": "06:30"
+			"Date": "September 1, 1910",
+			"Time": "06:30 PM"
 		},
-		"Priority": "High"
-	},
-	{	
-		"Ticket details": {
-			"Text": "Bla",
-			"Last updated": "08/08/2022",
-			"Image": "avatar.png"
-		},
-		"Customer name": {
-			"Name": "Gabriela",
-			"Last updated": "08/08/2022"
-		},
-		"Date": {
-			"Date": "08/08/2022",
-			"Time": "06:30"
-		},
-		"Priority": "High"
-	},
-	{	
-		"Ticket details": {
-			"Text": "Bla",
-			"Last updated": "08/08/2022",
-			"Image": "avatar.png"
-		},
-		"Customer name": {
-			"Name": "Gabriela",
-			"Last updated": "08/08/2022"
-		},
-		"Date": {
-			"Date": "08/08/2022",
-			"Time": "06:30"
-		},
-		"Priority": "High"
-	},
-	{	
-		"Ticket details": {
-			"Text": "Bla",
-			"Last updated": "08/08/2022",
-			"Image": "avatar.png"
-		},
-		"Customer name": {
-			"Name": "Gabriela",
-			"Last updated": "08/08/2022"
-		},
-		"Date": {
-			"Date": "08/08/2022",
-			"Time": "06:30"
-		},
-		"Priority": "High"
-	},
-	{	
-		"Ticket details": {
-			"Text": "Bla",
-			"Last updated": "08/08/2022",
-			"Image": "avatar.png"
-		},
-		"Customer name": {
-			"Name": "Gabriela",
-			"Last updated": "08/08/2022"
-		},
-		"Date": {
-			"Date": "08/08/2022",
-			"Time": "06:30"
-		},
-		"Priority": "High"
-	},
-	{	
-		"Ticket details": {
-			"Text": "Bla",
-			"Last updated": "08/08/2022",
-			"Image": "avatar.png"
-		},
-		"Customer name": {
-			"Name": "Gabriela",
-			"Last updated": "08/08/2022"
-		},
-		"Date": {
-			"Date": "08/08/2022",
-			"Time": "06:30"
-		},
-		"Priority": "High"
-	},
-	{	
-		"Ticket details": {
-			"Text": "Bla",
-			"Last updated": "08/08/2022",
-			"Image": "avatar.png"
-		},
-		"Customer name": {
-			"Name": "Gabriela",
-			"Last updated": "08/08/2022"
-		},
-		"Date": {
-			"Date": "08/08/2022",
-			"Time": "06:30"
-		},
-		"Priority": "High"
-	},
-	{	
-		"Ticket details": {
-			"Text": "Bla",
-			"Last updated": "08/08/2022",
-			"Image": "avatar.png"
-		},
-		"Customer name": {
-			"Name": "Gabriela",
-			"Last updated": "08/08/2022"
-		},
-		"Date": {
-			"Date": "08/08/2022",
-			"Time": "06:30"
-		},
-		"Priority": "High"
-	},
-	{	
-		"Ticket details": {
-			"Text": "Bla",
-			"Last updated": "08/08/2022",
-			"Image": "avatar.png"
-		},
-		"Customer name": {
-			"Name": "Gabriela",
-			"Last updated": "08/08/2022"
-		},
-		"Date": {
-			"Date": "08/08/2022",
-			"Time": "06:30"
-		},
-		"Priority": "High"
+		"Priority": "Normal"
 	}
 ]

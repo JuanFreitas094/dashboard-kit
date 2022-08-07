@@ -9,7 +9,7 @@ const StyledButtonMenu = styled.button`
     background: transparent;
     border: none;
     
-    :hover {
+    :hover, :focus {
         background-color: ${props => props.theme.menuButtonHover};
         border-left: 2px solid white;
     }
@@ -26,11 +26,13 @@ const StyledIcon = styled.div`
 
 const StyledText = styled.p`
     padding: 0 10px;
+    font-size: 10px;
+    font-family: 'Mulish', sans-serif;
     color: ${props => props.theme.lightGrey}
 `
 
 function ButtonMenu({ name, icon }) {
-    return (
+    return (        
         <StyledButtonMenu>     
             <StyledContent>
                 <StyledIcon>
@@ -38,7 +40,7 @@ function ButtonMenu({ name, icon }) {
                 </StyledIcon>
                 <StyledText>{name}</StyledText>
             </StyledContent>
-        </StyledButtonMenu>
+        </StyledButtonMenu> 
     )
 }
 

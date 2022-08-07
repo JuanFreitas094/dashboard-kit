@@ -14,6 +14,9 @@ const theme = {
     menuButtonHover: '#4f505c',
     tableSubText: '#C5C7CD',
     backgroundMain: '#f5f5f5',
+    backgroundTagLow: '#FEC400',
+    backgroundTagHigh: '#F12B2C',
+    backgroundTagNormal: '#29CC97', 
 }
 
 export default theme

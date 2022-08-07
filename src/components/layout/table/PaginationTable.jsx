@@ -6,6 +6,7 @@ import { AiOutlineLeft } from 'react-icons/ai';
 import { useTable, usePagination } from 'react-table';
 import {COLUMNS} from './Columns';
 import { useMemo } from "react";
+import Tag from "../../inputs/Tag";
 
 const StyledContent = styled.div`
     display: flex;
@@ -44,7 +45,7 @@ const StyledTicketTextBlock = styled.div `
 `
 
 const StyledTextMain = styled.p `
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 600;
     margin-bottom: 5px;
 `
@@ -56,7 +57,7 @@ const StyledText = styled.p `
 
 const StyledHeader = styled.th`   
     padding: 0 20px;
-    font-size: 12px;
+    font-size: 10px;
     color: ${props => props.theme.grey};
     border-bottom: 1px solid ${props => props.theme.menuLineColor};
 `
@@ -79,10 +80,33 @@ const StyledButton = styled.button`
 const StyledPaginationButtons = styled.div`
     margin-left: auto;
     padding: 15px;
+    display: flex;
+    align-items:center;
 `
 
 const StyledTBody = styled.tbody`
     padding: 0 20px;
+`
+
+const StyledTd = styled.td`
+    padding: 0 20px;    
+`
+
+const StyledSpan = styled.span`
+    color: ${props => props.theme.tableSubText};
+    font-size: 10px;
+`
+
+const StyledSelection = styled.select`
+    color: ${props => props.theme.tableSubText};
+    font-size: 10px;
+    border: none;
+    font-family: Mulish;
+`
+
+const StyledPageSize = styled.div`
+    padding-right: 80px;
+    padding-bottom: 5px;
 `
 
 function PaginationTable() {
@@ -97,6 +121,9 @@ function PaginationTable() {
         page,
         nextPage,
         previousPage,
+        pageOptions,
+        state,
+        setPageSize,
         prepareRow
     } = useTable(
         {
@@ -106,6 +133,7 @@ function PaginationTable() {
         usePagination
     )
 
+    const { pageIndex, pageSize } = state
 
     return (
         <StyledContent>
@@ -129,7 +157,7 @@ function PaginationTable() {
                     const priority = cells[3].value;
                     return (
                         <StyledTrRow>
-                            <td>
+                            <StyledTd>
                                 <StyledTicketInfo>
                                     <StyledImg src={ticketDetails['Image']} />
                                     <StyledTicketTextBlock>
@@ -137,82 +165,52 @@ function PaginationTable() {
                                         <StyledText>{ticketDetails['Last updated']}</StyledText>
                                     </StyledTicketTextBlock>
                                 </StyledTicketInfo>
-                            </td>
-                            <td>
+                            </StyledTd>
+                            <StyledTd>
                                 <StyledInfo>
                                     <StyledTextMain>{customerName['Name']}</StyledTextMain>
                                     <StyledText>{customerName['Last updated']}</StyledText>
                                 </StyledInfo>
-                            </td>
-                            <td>
+                            </StyledTd>
+                            <StyledTd>
                                 <StyledInfo>
                                     <StyledTextMain>{ticketDate['Date']}</StyledTextMain>
                                     <StyledText>{ticketDate['Time']}</StyledText>
                                 </StyledInfo>
-                            </td>
-                            <td>{priority}</td>
-                            <td><StyledButton> <BiDotsVerticalRounded /> </StyledButton></td>
+                            </StyledTd>
+                            <StyledTd><Tag priority={priority}/></StyledTd>
+                            <StyledTd><StyledButton> <BiDotsVerticalRounded /> </StyledButton></StyledTd>
                         
                         </StyledTrRow>
                     )
                 })}
             </StyledTBody>
         </StyledTable>
-        <StyledPaginationButtons>
+        <StyledPaginationButtons>  
+            <StyledPageSize>
+                <StyledSpan>
+                    Rows per page: 
+                </StyledSpan>          
+                <StyledSelection value={pageSize} onChange={e => setPageSize(Number(e.target.value))}>
+                    {
+                        [5, 8, 10, 20].map(pageSize => (
+                            <option key={pageSize} value={pageSize}>
+                                {pageSize}
+                            </option>
+                        ))
+                    }
+                </StyledSelection>
+            </StyledPageSize>
+            <StyledSpan>
+                Page{' '}
+                    {(pageIndex + 1)}-{pageOptions.length} with {MOCK_DATA.length} tickets
+                {' '}
+            </StyledSpan>
             <StyledButton onClick={() => previousPage()}> <AiOutlineLeft/> </StyledButton>
             <StyledButton onClick={() => nextPage()}> <AiOutlineRight /> </StyledButton> 
         </StyledPaginationButtons>
         </StyledContent>
     )
-    // return (
-    //     <StyledTable>
-    //         <StyledTHead>
-    //             <tr>
-    //                 <StyledHeader>Ticket details</StyledHeader>  
-    //                 <StyledHeader>Customer name</StyledHeader> 
-    //                 <StyledHeader>Date</StyledHeader> 
-    //                 <StyledHeader>Priority</StyledHeader> 
-    //                 <StyledHeader></StyledHeader>
-    //             </tr> 
-    //         </StyledTHead>
-    //         <tbody>
-    //             {MOCK_DATA.map((item) => {      
-    //                 const ticketDetails = item['Ticket details'];
-    //                 const customerName = item['Customer name'];
-    //                 const ticketDate = item['Date'];
-    //                 const priority = item['Priority'];
-    //                 return (
-    //                     <StyledTrRow>
-    //                         <>
-    //                             <td>
-    //                                 <StyledTicketInfo>
-    //                                     <StyledImg src={ticketDetails['Image']} />
-    //                                     <StyledTicketTextBlock>
-    //                                         <StyledTextMain>{ticketDetails['Text']}</StyledTextMain>
-    //                                         <StyledText>{ticketDetails['Last updated']}</StyledText>
-    //                                     </StyledTicketTextBlock>
-    //                                 </StyledTicketInfo>
-    //                             </td>
-    //                             <td>
-    //                                 <StyledInfo>
-    //                                     <StyledTextMain>{customerName['Name']}</StyledTextMain>
-    //                                     <StyledText>{customerName['Last updated']}</StyledText>
-    //                                 </StyledInfo>
-    //                             </td>
-    //                             <td>
-    //                                 <StyledInfo>
-    //                                     <StyledTextMain>{ticketDate['Date']}</StyledTextMain>
-    //                                     <StyledText>{ticketDate['Time']}</StyledText>
-    //                                 </StyledInfo>
-    //                             </td>
-    //                             <td>{priority}</td>
-    //                         </>
-    //                     </StyledTrRow>
-    //                 );
-    //             })}
-    //         </tbody>
-    //     </StyledTable>
-    // )
 }
 
 export default PaginationTable

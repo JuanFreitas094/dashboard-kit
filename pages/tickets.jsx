@@ -15,11 +15,11 @@ const StyledComponent = styled.div `
 `
 const StyledContent = styled.div`
     display: block; 
-    width: 75%;
+    width: 80%;
 `
 
 const StyledMenu = styled.div`
-    width: 25%;
+    width: 20%;
 `
 
 const WIDHT_BREAK = '700px';
@@ -47,7 +47,7 @@ const StyledNavbar = styled.div`
 `
 
 const StyledTitle = styled.span `
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     text-align: left;
     color: ${props => props.theme.black};
@@ -69,7 +69,7 @@ const StyledButtons = styled.div `
 
 const StyledText = styled.p `
     color: ${props => props.theme.black};
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 600;
 `
 
