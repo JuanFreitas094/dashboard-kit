@@ -2,12 +2,7 @@ import styled from "styled-components";
 
 const StyledContent = styled.div`
     border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
-    justify-content: center;
-    margin-right: auto;
     background-color: white;
     width: 130px;
     height: 70px;

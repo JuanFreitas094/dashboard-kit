@@ -16,7 +16,8 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: ${props => props.theme.primary};
     text-decoration: none;
-    transition: all 0.3s
+    transition: all 0.3s;
+    width: 100%;
   }
 
   a:hover {
@@ -30,6 +31,7 @@ function App ({ Component, pageProps }) {
       <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin></link>
       <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400&display=swap" rel="stylesheet"></link>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"></link>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />

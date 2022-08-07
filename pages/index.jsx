@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import LoginPage from "./login";
 
 const StyledComponent = styled.div `
   display: flex;
@@ -9,7 +10,7 @@ const StyledComponent = styled.div `
 function HomePage () {
   return (
     <StyledComponent>
-      Dashboard Kit
+      <LoginPage />
     </StyledComponent>
   )
 }
