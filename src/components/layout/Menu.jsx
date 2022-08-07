@@ -13,8 +13,8 @@ import ButtonMenu from "../inputs/ButtonMenu";
 
 const StyledMenu = styled.div `
     background-color: ${props => props.theme.backgroundGrey};
-    width: 255px;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-flow: column;
 `

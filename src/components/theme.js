@@ -12,6 +12,8 @@ const theme = {
     background: '#F7F8FC',
     menuLineColor: '#DFE0EB',
     menuButtonHover: '#4f505c',
+    tableSubText: '#C5C7CD',
+    backgroundMain: '#f5f5f5',
 }
 
 export default theme

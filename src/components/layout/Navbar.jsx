@@ -8,7 +8,6 @@ const StyledNavbar = styled.div`
     background-color: transparent;
     height: 80px;
     align-items: center;
-    padding: 0 20px; 
     overflow: hidden;
     width: 100%;
 `
@@ -18,6 +17,7 @@ const StyledTitle = styled.span `
     font-size: 20px;
     font-weight: bold;
     text-align: left;
+    padding: 0 20px; 
     color: ${props => props.theme.black};
 `
 
@@ -55,7 +55,7 @@ const StyledText = styled.p `
 function Navbar () {
     return (
         <StyledNavbar>
-            <StyledTitle>Overview</StyledTitle>
+            <StyledTitle>Tickets</StyledTitle>
             <StyledButtons>
                 <StyledButton><BiSearch /></StyledButton>
                 <StyledButton><IoMdNotifications /></StyledButton>
