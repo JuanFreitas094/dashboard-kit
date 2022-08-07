@@ -52,10 +52,10 @@ const StyledText = styled.p `
     font-weight: 600;
 `
 
-function Navbar () {
+function Navbar({ title }) {
     return (
         <StyledNavbar>
-            <StyledTitle>Tickets</StyledTitle>
+            <StyledTitle>{ title }</StyledTitle>
             <StyledButtons>
                 <StyledButton><BiSearch /></StyledButton>
                 <StyledButton><IoMdNotifications /></StyledButton>

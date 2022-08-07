@@ -78,7 +78,7 @@ function TicketsPage() {
         <StyledComponent>
             <StyledMenu><Menu /></StyledMenu>
             <StyledContent>
-                <Navbar />
+                <Navbar title="Tickets" />
                 <StyledPaginationTable>
                     <StyledNavbar>
                         <StyledTitle>All tickets</StyledTitle>
