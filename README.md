@@ -42,3 +42,7 @@ localhost:3000/
 ### Link between pages
 The first page is the login page. If you press "Login", it will redirect the page to the overview page (localhost:3000/overview).
 Feel free to navigate the menu (although it is not completly implemented), but please don't forget to press "Tickets", since it is the third page implemented.
+
+### Publication link
+This project was published through vercel, in the link below:
+https://dashboard-pjsdhpf7y-juanfreitas094.vercel.app/
