@@ -12,7 +12,8 @@ const StyledButtonMenu = styled.button`
     :hover, :focus {
         background-color: ${props => props.theme.menuButtonHover};
         border-left: 2px solid white;
-    }
+    }    
+    cursor: pointer;
 `
 
 const StyledButtonMenuChecked = styled.button`
@@ -24,6 +25,7 @@ const StyledButtonMenuChecked = styled.button`
     background:  ${props => props.theme.menuButtonHover};
     border: none;
     border-left: 2px solid white;
+    cursor: pointer;
 `
 
 const StyledContent = styled.div`
