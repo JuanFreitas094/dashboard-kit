@@ -37,7 +37,7 @@ const StyledIcon = styled.div`
 
 const StyledText = styled.p`
     padding: 0 10px;
-    font-size: 10px;
+    font-size: 12px;
     font-family: 'Mulish', sans-serif;
     color: ${props => props.theme.lightGrey}
 `

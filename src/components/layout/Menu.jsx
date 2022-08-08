@@ -36,7 +36,7 @@ const StyledTitle = styled.div `
 `
 
 const StyledText = styled.p`
-    font-size: 12px;
+    font-size: 14px;
     padding-left: 5px;
     color: ${props => props.theme.lightGrey};
 `
