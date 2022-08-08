@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import InputWithIcon from "./InputWithIcon";
+import H5 from "../typography/H5";
 
 const InputContainer = styled.div`
-    width: 100%
+    width: 100%;
+    position: relative;
 `
 
 const StyledLabel = styled.p`
@@ -25,11 +28,19 @@ const StyledInput = styled.input`
     box-sizing: border-box;
 `
 
-function Input ({ label, placeholder, ...props }) {
+const StyledTitle = styled.div`
+    display:flex;
+`
+
+function Input ({ label, placeholder, showPass, ...props }) {
     return (
         <InputContainer>
-            <StyledLabel>{label}</StyledLabel>
-            <StyledInput placeholder={placeholder} {...props}/>
+            <StyledTitle>
+                <StyledLabel>{label}</StyledLabel>
+                {showPass? <a href="#"><H5>Forgot password?</H5></a> : null}
+            </StyledTitle>
+            {showPass? <InputWithIcon placeholder={placeholder}/> 
+            : <StyledInput placeholder={placeholder}/>}
         </InputContainer>
     )
 }

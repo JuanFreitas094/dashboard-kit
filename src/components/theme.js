@@ -1,7 +1,7 @@
 const theme = {
     primary: '#3751FF',
     primaryHover: '#87CEFA',
-    inputBackground: '#FCFDFE',
+    inputBackground: '#FCF5FE',
     inputBorder: '#F0F1F7',
     black: '#252733',
     white: '#FFFFFF',

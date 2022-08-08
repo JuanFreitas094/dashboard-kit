@@ -44,8 +44,7 @@ function LoginPage () {
             <Form>
                 <Input label="EMAIL" placeholder="Email address"type="email" />                
                 <StyledPassword>
-                    <Input label="PASSWORD" placeholder="Password" type="password" showPass={true}/>
-                    <a href="#"><H5>Forgot password?</H5></a>
+                    <Input label="PASSWORD" placeholder="Password" type="password" showPass={true}/>                    
                 </StyledPassword>
                 <Link href="/overview"><Button>Log In</Button></Link>
             </Form>
