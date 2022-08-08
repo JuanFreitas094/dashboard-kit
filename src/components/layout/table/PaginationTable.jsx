@@ -3,15 +3,16 @@ import MOCK_DATA from '../../../../public/MOCK_DATA.json';
 import { BiDotsVerticalRounded } from 'react-icons/bi';
 import { AiOutlineRight } from 'react-icons/ai';
 import { AiOutlineLeft } from 'react-icons/ai';
-import { useTable, usePagination } from 'react-table';
+import { useTable, usePagination, useSortBy } from 'react-table';
 import {COLUMNS} from './Columns';
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import Tag from "../../inputs/Tag";
+import {BiSortUp} from 'react-icons/bi';
+import {FaFilter} from 'react-icons/fa'
 
 const StyledContent = styled.div`
     display: flex;
     flex-direction: column;
-    align-items:center;
     width: 100%;
 `
 
@@ -108,11 +109,60 @@ const StyledPageSize = styled.div`
     padding-right: 80px;
     padding-bottom: 5px;
 `
+const StyledNavbar = styled.div`
+    display: flex;
+    background-color: transparent;
+    height: 80px;
+    align-items: center; 
+    justify-content: space-between;  
+    overflow: hidden;
+    margin: 0 20px;
+`
+
+const StyledTitle = styled.span `
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    color: ${props => props.theme.black};
+`
+
+const StyledButtons = styled.div `
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+
+const StyledButtonNavBar = styled.button `
+    color: ${props => props.theme.grey};
+    font-size: 11px;
+    font-weight: 600;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+`
 
 function PaginationTable() {
+    
+    const [mockData, setData] = useState([].concat(MOCK_DATA))
+    const [sorted, setSort] = useState(false)
+    
+    const SortTable = () => {
+        let data = null;
+        if (sorted) {
+            data = [].concat(MOCK_DATA);
+        } else {
+            data = [].concat(mockData.sort((a, b) => a['Ticket details']['Text'] > b['Ticket details']['Text'] ? 1 : -1));
+        }
+        
+        console.log(MOCK_DATA)
+        setData(data);
+        setSort(!sorted);
+    }
 
     const columns = useMemo(() => COLUMNS, [])
-    const data = useMemo(() => MOCK_DATA, [])
+    const data = useMemo(() => mockData, [mockData])
 
     const {
         getTableProps,
@@ -137,13 +187,30 @@ function PaginationTable() {
 
     return (
         <StyledContent>
+        <StyledNavbar>
+            <StyledTitle>All tickets</StyledTitle>
+            <StyledButtons>
+                <StyledButtonNavBar onClick={() => SortTable()}>
+                    <BiSortUp />
+                    Sort
+                </StyledButtonNavBar> 
+                <StyledButtonNavBar>
+                    <FaFilter />
+                    Filter
+                </StyledButtonNavBar>  
+            </StyledButtons> 
+        </StyledNavbar>
         <StyledTable {...getTableProps()}>
             <StyledTHead>
                 {headerGroups.map((headerGroup) => (
                     <tr {...headerGroup.getHeaderGroupProps()}>
-                        {headerGroup.headers.map((column) => (
-                            <StyledHeader {...column.getHeaderProps()}>{column.render('Header')}</StyledHeader>
-                        ))}
+                        {headerGroup.headers.map((column) => {                   
+                            return (
+                                <StyledHeader {...column.getHeaderProps()}>
+                                    {column.render('Header')}
+                                </StyledHeader>
+                            )
+                        })}
                     </tr>
                 ))}
             </StyledTHead>
