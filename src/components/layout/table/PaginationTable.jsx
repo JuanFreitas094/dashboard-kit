@@ -9,6 +9,7 @@ import { useMemo, useState } from "react";
 import Tag from "../../inputs/Tag";
 import {BiSortUp} from 'react-icons/bi';
 import {FaFilter} from 'react-icons/fa'
+import Dropdown from 'react-dropdown';
 
 const StyledContent = styled.div`
     display: flex;
@@ -143,11 +144,27 @@ const StyledButtonNavBar = styled.button `
     padding: 10px;
 `
 
+const StyledDropDown = styled.div`
+    color: ${props => props.theme.grey};
+`
+
+const StyledFilter = styled.div`
+    display: flex;
+    flex-direction: row;
+    color: ${props => props.theme.grey};
+    font-size: 12px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px;
+`
+
 function PaginationTable() {
     
     const [mockData, setData] = useState([].concat(MOCK_DATA))
     const [sorted, setSort] = useState(false)
-    
+
     const SortTable = () => {
         let data = null;
         if (sorted) {
@@ -160,6 +177,21 @@ function PaginationTable() {
         setData(data);
         setSort(!sorted);
     }
+
+    const FilterTable = (event) => {
+        const priority = event.value;
+        let data = [].concat(MOCK_DATA);
+        console.log(data);
+        if (priority && priority !== "All") {
+            data = [].concat(data.filter(a => a['Priority'] === priority? a['Priority'] : null));
+        } 
+        setData(data);
+    }
+
+    const options = [
+        'All', 'High', 'Low', 'Normal'
+    ];
+    const defaultOption = options[0];
 
     const columns = useMemo(() => COLUMNS, [])
     const data = useMemo(() => mockData, [mockData])
@@ -193,11 +225,13 @@ function PaginationTable() {
                 <StyledButtonNavBar onClick={() => SortTable()}>
                     <BiSortUp />
                     Sort
-                </StyledButtonNavBar> 
-                <StyledButtonNavBar>
+                </StyledButtonNavBar>
+                <StyledFilter>                 
                     <FaFilter />
-                    Filter
-                </StyledButtonNavBar>  
+                    <StyledDropDown>
+                        <Dropdown options={options} onChange={FilterTable}  placeholder="Filter" />
+                    </StyledDropDown>
+                </StyledFilter>
             </StyledButtons> 
         </StyledNavbar>
         <StyledTable {...getTableProps()}>
