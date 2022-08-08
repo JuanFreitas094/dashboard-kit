@@ -101,6 +101,12 @@ const StyledTicketTable = styled.p`
     font-size: 12px;
 `
 
+const StyledCheckboxText = styled.p`
+    font-weight: 600;
+    font-size: 12px;
+    padding: 0 15px;
+`
+
 const StyledTicketTableDesc = styled.p`
     font-size: 12px;
     color: ${props => props.theme.lightGrey};
@@ -119,6 +125,11 @@ const StyledDivTrendsCard = styled.div`
     display: flex;
     align-items: stretch;
     height: 100%;
+`
+
+const StyledCheckbox = styled.div`
+    display: flex;
+    flex-direction: row;
 `
 
 const pageName = "Overview";
@@ -194,7 +205,10 @@ function OverviewPage() {
                             <tbody>
                                 <StyledTrRow>
                                     <StyledTd>
-                                        <StyledTicketTableDesc>Create new task</StyledTicketTableDesc>
+                                        <StyledCheckbox>
+                                            <input type="checkbox"/>
+                                            <StyledCheckboxText>Create new task</StyledCheckboxText>
+                                        </StyledCheckbox>
                                     </StyledTd>
                                     <StyledTd2>
                                         <StyledButton><GoPlus /></StyledButton>
@@ -202,23 +216,32 @@ function OverviewPage() {
                                 </StyledTrRow>
                                 <StyledTrRow>
                                     <StyledTd>
-                                        <StyledTicketTable>Finish ticket update</StyledTicketTable>
+                                        <StyledCheckbox>
+                                            <input type="checkbox"/>
+                                            <StyledCheckboxText>Finish ticket update</StyledCheckboxText>
+                                        </StyledCheckbox>
                                     </StyledTd>
                                     <StyledTd2>
                                         <StyledDiv><Tag priority="High"/></StyledDiv>
                                     </StyledTd2>
                                 </StyledTrRow>
                                 <StyledTrRow>
-                                    <StyledTd>
-                                        <StyledTicketTable>Create new ticket example</StyledTicketTable>
+                                    <StyledTd>                                        
+                                        <StyledCheckbox> 
+                                            <input type="checkbox"/>
+                                            <StyledCheckboxText>Create new ticket example</StyledCheckboxText>
+                                        </StyledCheckbox> 
                                     </StyledTd>
                                     <StyledTd2>
                                         <StyledDiv><Tag priority="Normal"/></StyledDiv>
                                     </StyledTd2>
                                 </StyledTrRow>
                                 <StyledTrRow>
-                                    <StyledTd>
-                                        <StyledTicketTable>Update ticket report</StyledTicketTable>
+                                    <StyledTd> 
+                                        <StyledCheckbox>  
+                                            <input type="checkbox"/>                                     
+                                            <StyledCheckboxText>Update ticket report</StyledCheckboxText>
+                                        </StyledCheckbox>
                                     </StyledTd>
                                     <StyledTd2>
                                     <StyledDiv><Tag priority="Low"/></StyledDiv>
